@@ -1,0 +1,48 @@
+title: '#1 platform to buy and sell online businesses'
+
+banner:
+  title: Vượt trội trên Online với Website chuyên nghiệp
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+    consequatur, impedit doloribus neque dicta, facilis laudantium
+    voluptates vero beatae eaque dignissimos est voluptatum, ut qui
+    quisquam natus itaque nobis porro.
+  img_url: https://file.hstatic.net/1000001117/file/home-product-haraweb2x_37313fcf2cc7481f85494c50a903aa86.jpg
+
+projects:
+  - title: Project 1
+    description:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+      cupiditate iste blanditiis quod sequi architecto officia rerum
+      dolorem numquam maiores. Officiis, eos! Animi, explicabo! Obcaecati
+      eum culpa laboriosam magnam eveniet?
+  - title: Project 2
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+      magni, ipsum sed obcaecati quod quibusdam sunt explicabo voluptate
+      odio distinctio perspiciatis iste. Iure in fugit ullam temporibus
+      animi sequi maxime.
+  - title: Project 3
+    description:
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse
+      sint repellat beatae iure voluptate iusto quos facilis nihil
+      accusantium totam maiores tempora id aut accusamus, delectus eveniet
+      deserunt? Nihil.
+
+clients:
+  - name: Client 1
+    feedback:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+      cupiditate iste blanditiis quod sequi architecto officia rerum
+      dolorem numquam maiores. Officiis, eos! Animi, explicabo! Obcaecati
+      eum culpa laboriosam magnam eveniet?
+  - name: Client 2
+    feedback:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+      cupiditate iste blanditiis quod sequi architecto officia rerum
+      dolorem numquam maiores. Officiis, eos! Animi, explicabo! Obcaecati
+      eum culpa laboriosam magnam eveniet?
+  - name: Client 3
+    feedback:
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+      cupiditate iste blanditiis quod sequi architecto officia rerum
+      dolorem numquam maiores. Officiis, eos! Animi, explicabo! Obcaecati
+      eum culpa laboriosam magnam eveniet?

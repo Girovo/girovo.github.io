@@ -1,0 +1,13 @@
+services:
+  header: Services
+  items:
+    - Websites
+    - SEO
+    - Content
+
+company_info:
+  header: Company
+  items:
+    - About
+    - Contact
+    - Blog

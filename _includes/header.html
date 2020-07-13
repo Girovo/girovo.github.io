@@ -1,0 +1,37 @@
+<header>
+  <nav class="navbar navbar-expand-md theme-background navbar-dark">
+    <div class="container text-white">
+      <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">
+        {{ site.title | escape }}
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto">
+          {% for item in site.data.main_menu %}
+            {% if item.sub_items.size > 0 %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="{{ item.url }}" id="{{ item.name }}_menu_dropdown"
+                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ item.title | escape }}
+                </a>
+                <div class="dropdown-menu mt-0" aria-labelledby="{{ item.name }}_menu_dropdown">
+                  {% for sub_item in item.sub_items %}
+                    <a class="dropdown-item" href="{{ sub_item.url }}">{{ sub_item.title | escape }}</a>
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{{ item.url }}">{{ item.title | escape }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div><!-- end container -->
+  </nav>
+</header>

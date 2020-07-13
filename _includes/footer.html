@@ -1,0 +1,37 @@
+<footer class="mt-auto theme-background">
+  <div class="container mt-3 pt-3 text-white">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <data class="u-url" href="{{ "/" | relative_url }}"></data>
+        <h2 class="footer-heading">{{ site.title | escape }}</h2>
+      </div>
+
+      <dl class="col-xs-12 col-sm-6 col-md-3">
+        <dt class="mb-2">{{ site.data.footer.services.header }}</dt>
+        {% for item in site.data.footer.services.items %}
+          <dd>{{ item }}</dd>
+        {% endfor %}
+      </dl>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <dt class="mb-2">Connect with us</dt>
+        {%- include social.html -%}
+      </div>
+
+      <dl class="col-xs-12 col-sm-6 col-md-3">
+        <dt class="mb-2">{{ site.data.footer.company_info.header }}</dt>
+        {% for item in site.data.footer.company_info.items %}
+          <dd>{{ item }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    <hr/>
+    <div class="row mb-2">
+      {%- if site.email -%}
+        <div class="col text-center">
+          Email: <a href="mailto:{{ site.email }}"><strong>{{ site.email }}</strong></a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div> <!-- end container -->
+</footer>
