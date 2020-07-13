@@ -1,0 +1,7 @@
+a { color: inherit; }
+
+a:hover { color: inherit; }
+
+.theme-background { background-color: #1f4d6d; }
+
+.svg-icon { max-width: 15px; max-height: 15px; }
