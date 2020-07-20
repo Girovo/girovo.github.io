@@ -20,11 +20,11 @@
     <a
       href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"
     >
-      <svg class="svg-icon">
+      <!-- <svg class="svg-icon">
         <use
           xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"
         ></use>
-      </svg>
+      </svg> -->
       <i class="fab fa-facebook"></i>
       <span class="username">{{ site.facebook_username| escape }}</span>
     </a>
@@ -117,11 +117,13 @@
   <li>
     <a
       href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}"
-      ><svg class="svg-icon">
+    >
+      <!-- <svg class="svg-icon">
         <use
           xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"
         ></use>
-      </svg>
+      </svg> -->
+      <i class="fab fa-twitter"></i>
       <span class="username">{{ site.twitter_username| escape }}</span></a
     >
   </li>
