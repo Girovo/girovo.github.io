@@ -1,13 +1,17 @@
+- name: about
+  title: About us
+  url: /about
+
 - name: service
   title: Services
   url: /services
   sub_items:
-    - title: Website
-      url: /services/website
-    - title: SEO
-      url: /services/seo
-    - title: Content
-      url: /services/content
+    - title: Web design
+      url: /services/web-design
+    - title: Web development
+      url: /services/web-development
+    - title: Website maintenance
+      url: /services/website-maintenance
 
 - name: porfolio
   title: Porfolio
@@ -17,6 +21,6 @@
   title: Blog
   url: /blog
 
-- name: about
-  title: About
-  url: /about
+- name: contact
+  title: Contact us
+  url: /contact
