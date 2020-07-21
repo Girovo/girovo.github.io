@@ -1,8 +1,6 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-  identity_url: 'https://girovo.github.io/.netlify/identity'
-  gateway_url: 'https://girovo.github.io/.netlify/git'
   squash_merges: true
 
 publish_mode: editorial_workflow
