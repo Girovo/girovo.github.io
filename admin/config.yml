@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  repo: Girovo/girovo.github.io
   branch: master # Branch to update (optional; defaults to master)
   squash_merges: true
+  site_domain: https://kind-ramanujan-293e2a.netlify.app/
 
 publish_mode: editorial_workflow
 media_folder: 'images/uploads'
