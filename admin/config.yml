@@ -7,7 +7,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: 'images/uploads'
 
-site_url: https://girovo.github.io
+site_url: https://kind-ramanujan-293e2a.netlify.app
 
 collections:
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
