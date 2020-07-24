@@ -108,7 +108,7 @@ $(() => {
     lastScrollTop = st;
   }
 
-  $('.site-content').css('margin-top', $('header').outerHeight() + 'px');
+  $('main').css('margin-top', $('header').outerHeight() + 'px');
 
   // scroll body to 0px on click
   $('#back-to-top').click(function () {

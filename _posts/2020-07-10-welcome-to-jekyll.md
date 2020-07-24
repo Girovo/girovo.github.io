@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Welcome to Jekyll!'
+author: va
 date: 2020-07-10 21:52:04 +0700
 categories: jekyll update
 ---
