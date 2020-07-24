@@ -7,9 +7,9 @@
       </div>
 
       <dl class="col-xs-12 col-sm-6 col-md-3">
-        <dt class="mb-2">{{ site.data.footer.services.header }}</dt>
-        {% for item in site.data.footer.services.items %}
-          <dd>{{ item }}</dd>
+        <dt class="mb-2">{{ site.data.main_menu[1].title }}</dt>
+        {% for item in site.data.main_menu[1].sub_items %}
+          <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
         {% endfor %}
       </dl>
 
