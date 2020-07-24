@@ -6,7 +6,7 @@ layout: default
 <div class="container pt-3">
   <div class="row">
     <!-- Post Share -->
-    <div class="col-md-2 pl-0">
+    <div class="col-md-2 pl-0 d-none d-md-block">
       {% include share.html %}
     </div>
 
@@ -17,46 +17,52 @@ layout: default
       <div class="mainheading">
         <!-- Author Box -->
         {% if page.author %}
-        <div class="row">
-          <div class="col-md-2">
-            <img
-              class="author-thumb rounded-circle img-fluid"
-              src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x"
-              alt="{{ author.display_name }}"
-            />
-          </div>
-          <div class="col-md-10">
-            <a target="_blank" href="{{ author.web }}"
-              >{{ author.display_name }}</a
-            >
-            <a
-              target="_blank"
-              href="{{ author.twitter }}"
-              class="btn btn-follow"
-              >Follow</a
-            >
-            <span class="author-description">{{ author.description }}</span>
-            {% if page.date %}
-            <p>
-              <small>
-                <span class="post-date">
-                  <time
-                    class="post-date"
-                    datetime="{{ page.date | date:'%Y-%m-%d' }}"
+        <div class="card border-0">
+          <div class="row no-gutters">
+            <div class="col-auto">
+              <img
+                class="author-thumb rounded-circle img-fluid"
+                src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x"
+                alt="{{ author.display_name }}"
+              />
+            </div>
+            <div class="col">
+              <div class="card-block p-2">
+                <div class="card-title">
+                  <a target="_blank" href="{{ author.web }}"
+                    >{{ author.display_name }}</a
                   >
-                    {{ page.date | date_to_string }}
-                  </time>
-                </span>
-                {% if page.last_modified_at %} (Updated:
-                <time
-                  datetime="{{ page.last_modified_at | date_to_xmlschema }}"
-                  itemprop="dateModified"
-                >
-                  {{ page.last_modified_at | date: "%b %-d, %Y" }}</time
-                >) {% endif %}
-              </small>
-            </p>
-            {% endif %}
+                  <a
+                    target="_blank"
+                    href="{{ author.twitter }}"
+                    class="btn btn-follow"
+                    >Follow</a
+                  >
+                </div>
+                <span class="author-description">{{ author.description }}</span>
+                {% if page.date %}
+                <p>
+                  <small>
+                    <span class="post-date">
+                      <time
+                        class="post-date"
+                        datetime="{{ page.date | date:'%Y-%m-%d' }}"
+                      >
+                        {{ page.date | date_to_string }}
+                      </time>
+                    </span>
+                    {% if page.last_modified_at %} (Updated:
+                    <time
+                      datetime="{{ page.last_modified_at | date_to_xmlschema }}"
+                      itemprop="dateModified"
+                    >
+                      {{ page.last_modified_at | date: "%b %-d, %Y" }}</time
+                    >) {% endif %}
+                  </small>
+                </p>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
         {% endif %}
