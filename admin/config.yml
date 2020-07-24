@@ -5,7 +5,7 @@ backend:
   site_domain: https://kind-ramanujan-293e2a.netlify.app/
 
 publish_mode: editorial_workflow
-media_folder: 'images/uploads'
+media_folder: 'assets/images/uploads'
 
 site_url: https://girovo.github.io
 
