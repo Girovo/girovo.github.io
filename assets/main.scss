@@ -27,14 +27,39 @@ a:hover {
 }
 
 .share {
-  position: fixed;
-  display: block;
   color: rgba(0, 0, 0, 0.44);
-  text-align: center;
+  fill: rgba(0, 0, 0, 0.44);
+
+  a {
+    color: rgba(0, 0, 0, 0.44);
+    fill: rgba(0, 0, 0, 0.44);
+  }
 
   p {
     margin-bottom: 10px;
     font-size: 0.95rem;
+  }
+
+  ul {
+    li {
+      margin-bottom: 9px;
+
+      i.fa {
+        border: 1px solid #ddd;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .share {
+    margin-top: 30px;
+    position: fixed;
   }
 }
 

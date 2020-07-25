@@ -96,11 +96,11 @@
 <div class="container pt-3">
   <div class="row">
     <!-- Post Share -->
-    <div class="col-md-2 pl-0 d-none d-md-block">
-      <div class="share">
+    <div class="col-md-2 pl-0 d-block-sm order-sm-2 order-md-1">
+      <div class="share text-center">
   <p>Share</p>
-  <ul class="list-unstyled">
-    <li class="ml-1 mr-1">
+  <ul class="list-unstyled pl-0 ml-0">
+    <li class="ml-1 mr-1 d-inline-block d-md-block">
       <a
         target="_blank"
         href="https://twitter.com/intent/tweet?text=Welcome to Jekyll!&url=http://localhost:4000/blog/welcome-to-jekyll.html"
@@ -110,7 +110,7 @@
       </a>
     </li>
 
-    <li class="ml-1 mr-1">
+    <li class="ml-1 mr-1 d-inline-block d-md-block">
       <a
         target="_blank"
         href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/welcome-to-jekyll.html"
@@ -119,21 +119,11 @@
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
-
-    <li class="ml-1 mr-1">
-      <a
-        target="_blank"
-        href="https://plus.google.com/share?url=http://localhost:4000/blog/welcome-to-jekyll.html"
-        onclick="window.open(this.href, 'facebook-google', 'width=550,height=435');return false;"
-      >
-        <i class="fab fa-google"></i>
-      </a>
-    </li>
   </ul>
   
   <div class="sep"></div>
-  <ul>
-    <li>
+  <ul class="pl-0 ml-0">
+    <li class="d-inline-block d-md-block">
       <a class="small smoothscroll" href="#disqus_thread"></a>
     </li>
   </ul>
@@ -145,7 +135,7 @@
     <!-- Post -->
     
 
-    <div class="col-md-9 flex-first flex-md-unordered">
+    <div class="col-md-9 flex-first flex-md-unordered order-sm-1 order-md-2">
       <div class="mainheading">
         <!-- Author Box -->
         
@@ -338,11 +328,15 @@
       <dl class="col-xs-12 col-sm-6 col-md-3">
         <dt class="mb-2">Company</dt>
         
-          <dd>About</dd>
+          <dd><a href="/about">About us</a></dd>
         
-          <dd>Contact</dd>
+          <dd><a href="/services">Services</a></dd>
         
-          <dd>Blog</dd>
+          <dd><a href="/porfolio">Porfolio</a></dd>
+        
+          <dd><a href="/blog">Blog</a></dd>
+        
+          <dd><a href="/contact">Contact us</a></dd>
         
       </dl>
     </div>
