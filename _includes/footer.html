@@ -19,9 +19,9 @@
       </div>
 
       <dl class="col-xs-12 col-sm-6 col-md-3">
-        <dt class="mb-2">{{ site.data.footer.company_info.header }}</dt>
-        {% for item in site.data.footer.company_info.items %}
-          <dd>{{ item }}</dd>
+        <dt class="mb-2">Company</dt>
+        {% for item in site.data.main_menu %}
+          <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
         {% endfor %}
       </dl>
     </div>
