@@ -4,48 +4,76 @@ layout: default
 ---
 
 {%- if site.posts.size > 0 -%}
-<h2>{{ page.list_title | default: "Blogs" }}</h2>
-<div class="row my-3">
+<div class="section-title my-4">
+  <h2>
+    <span class="d-inline-block pb-2">
+      {{ page.list_title | default: "Blogs" }}
+    </span>
+  </h2>
+</div>
+
+<div class="row my-4">
   {% for post in site.posts %}
-  <div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="col-xs-12 col-md-6 col-lg-4 mb-2">
     <a href="{{ post.url | relative_url }}">
-      <div class="card">
+      <div class="card h-100">
         {%- if post.thumbnail -%}
         <img
           class="card-img-top"
           src="{{ post.thumbnail }}"
-          alt="Card image cap"
+          alt="{{ post.title }}"
         />
         {% endif %}
         <div class="card-body">
           <h4 class="card-title">{{ post.title | escape }}</h4>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d,
-          %Y" -%}
-          <h6 class="card-subtitle mb-2 text-muted">
-            {{ post.date | date: date_format }}
-          </h6>
-          <!-- <div class="card-text">{{ project.description }}</div> -->
+          <div class="card-text">
+            {{ post.excerpt | strip_html | truncatewords:30 }}
+          </div>
+        </div>
+        <div class="card-footer bg-white border-0 p-0 mt-auto">
+          {% assign author = site.data.authors[post.author] %}
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-auto">
+                <img
+                  class="author-thumb rounded-circle img-fluid"
+                  src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x"
+                  alt="{{ author.display_name }}"
+                />
+              </div>
+              <div class="col">
+                <div class="card-block">
+                  <div class="card-title mb-0">
+                    <a target="_blank" href="{{ author.web }}">
+                      {{ author.display_name }}
+                    </a>
+                  </div>
+                  {% if post.date %}
+                  <p>
+                    <small>
+                      <span class="text-muted">
+                        <time datetime="{{ page.date | date:'%Y-%m-%d' }}">
+                          {{ post.date | date_to_string }}
+                        </time>
+                      </span>
+                      {% if post.last_modified_at %} (Updated:
+                      <time
+                        datetime="{{ page.last_modified_at | date_to_xmlschema }}"
+                        itemprop="dateModified"
+                      >
+                        {{ post.last_modified_at | date: "%b %-d, %Y" }}</time
+                      >) {% endif %}
+                    </small>
+                  </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </a>
   </div>
   {% endfor %}
 </div>
-
-<!-- <ul class="post-list">
-  {%- for post in site.posts -%}
-  <li>
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h3>
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        {{ post.title | escape }}
-      </a>
-    </h3>
-    {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-  </li>
-  {%- endfor -%}
-</ul> -->
-
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
 {%- endif -%}

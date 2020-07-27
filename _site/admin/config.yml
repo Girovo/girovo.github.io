@@ -14,7 +14,7 @@ collections:
     label: 'Blog' # Used in the UI
     folder: '_posts/' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{day}}-{{month}}-{{year}}-{{slug}}' # Filename template, e.g., DD-MM-YYYY-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     summary: '{{title}} -- {{day}}/{{month}}/{{year}}'
     view_filters:
       - label: Drafts
@@ -34,6 +34,7 @@ collections:
         }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Comment', name: 'comment', widget: 'hidden', default: 'true' }
 
   - name: 'settings'
     label: 'Settings'

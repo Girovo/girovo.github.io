@@ -17,7 +17,7 @@ layout: default
       <div class="mainheading">
         <!-- Author Box -->
         {% if page.author %}
-        <div class="card border-0">
+        <div class="card border-0 post-top-meta">
           <div class="row no-gutters">
             <div class="col-auto">
               <img
@@ -119,7 +119,7 @@ layout: default
         >
         {% endif %} {% if page.next.url %}
         <a
-          class="next d-block col-md-6 text-lg-right"
+          class="next d-block col-md-6 text-right"
           href="{{page.next.url | absolute_url}}"
           >{{page.next.title}} &raquo;
         </a>
