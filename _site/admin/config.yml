@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
   squash_merges: true
-  site_domain: https://kind-ramanujan-293e2a.netlify.app/
 
 publish_mode: editorial_workflow
 media_folder: 'assets/images/uploads'
@@ -23,7 +22,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
       - {
           label: 'Publish Date',
           name: 'date',
@@ -34,7 +32,6 @@ collections:
         }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Comment', name: 'comment', widget: 'hidden', default: 'true' }
 
   - name: 'settings'
     label: 'Settings'
