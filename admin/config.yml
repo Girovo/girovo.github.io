@@ -28,7 +28,7 @@ collections:
           widget: 'datetime',
           dateFormat: 'DD-MM-YYYY',
           timeFormat: 'HH:mm',
-          format: 'DD-MM-YYYY HH:mm',
+          format: 'DD-MM-YYYY HH:mm'
         }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -68,10 +68,11 @@ collections:
       - name: 'authors'
         label: 'Authors'
         file: '_data/authors.yml'
-        description: 'Author descriptions'
+        description: 'Author list'
         fields:
           - name: authors
             label: Authors
+            summary: '{{display_name}}'
             label_singular: 'Author'
             widget: list
             fields:
@@ -79,10 +80,23 @@ collections:
                   label: 'Name',
                   name: 'name',
                   widget: 'string',
-                  hint: 'First and Last',
+                  pattern: ['^[a-z]*$', 'Lowercase alphabet only, no spaces between characters'],
+                  hint: 'Lowercase alphabet only, no spaces between characters'
                 }
               - {
-                  label: 'Description',
-                  name: 'description',
-                  widget: 'markdown',
+                  label: 'Display name',
+                  name: 'display_name',
+                  widget: 'string'
+                }
+              - {
+                  label: 'Gravatar',
+                  name: 'gravatar',
+                  widget: 'string',
+                  required: false
+                }
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  required: false
                 }
