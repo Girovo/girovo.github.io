@@ -2,6 +2,7 @@
 layout: post
 title: Test maika
 draft: false
+author: va
 date: 2020-07-26 19:43:00 +0700
 thumbnail: /assets/images/uploads/apple-logo.jpg
 ---
