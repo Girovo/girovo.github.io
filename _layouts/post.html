@@ -11,7 +11,11 @@ layout: default
     </div>
 
     <!-- Post -->
-    {% assign author = site.data.authors[page.author] %}
+    {% for author in site.data.authors.authors %}
+      {% if author.name == page.author %}
+        {% assign post_author = author %}
+      {% endif %}
+    {% endfor %}
 
     <div class="col-md-9 flex-first flex-md-unordered order-sm-1 order-md-2">
       <div class="mainheading">
@@ -22,16 +26,14 @@ layout: default
             <div class="col-auto">
               <img
                 class="author-thumb rounded-circle img-fluid"
-                src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x"
-                alt="{{ author.display_name }}"
+                src="https://www.gravatar.com/avatar/{{ post_author.gravatar }}?s=250&d=mm&r=x"
+                alt="{{ post_author.display_name }}"
               />
             </div>
             <div class="col">
               <div class="card-block p-2">
                 <div class="card-title">
-                  <a target="_blank" href="{{ author.web }}"
-                    >{{ author.display_name }}</a
-                  >
+                  {{ post_author.display_name }}
                   <a
                     target="_blank"
                     href="{{ author.twitter }}"
