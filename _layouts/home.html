@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="text-center my-3">
+<div class="text-center mt-5 mb-3">
   <h1>{{ site.data.main_page.title }}</h1>
 </div>
 
@@ -31,7 +31,22 @@ layout: default
 </div>
 <!-- end card -->
 
-<h3>Our projects</h3>
+<h2 class="text-center mt-5 mb-3">Our services</h2>
+<div class="row">
+  {% for service in site.data.services %}
+    <div class="col-xs-12 col-md-4">
+      <div class="card border-0">
+        <img src="{{ service.img }}" alt="{{ service.title }}"
+            class="mx-auto" style="width: 100px;">
+        <div class="card-body">
+          <div class="card-title text-center">{{ service.title }}</div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h2 class="text-center mt-5 mb-3">Our projects</h2>
 <div class="row mb-3">
   {% for project in site.data.main_page.projects %}
   <div class="col-xs-12 col-sm-6 col-md-4">

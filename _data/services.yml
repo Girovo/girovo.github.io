@@ -1,0 +1,9 @@
+- name: web-design
+  title: Web design
+  img: /assets/images/web-design.png
+- name: web-development
+  title: Web development
+  img: /assets/images/web-development.png
+- name: website-maintenance
+  title: Website maintenance
+  img: /assets/images/web-maintenance.png

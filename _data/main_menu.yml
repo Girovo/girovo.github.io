@@ -2,16 +2,16 @@
   title: About us
   url: /about
 
-- name: service
-  title: Services
-  url: /services
-  sub_items:
-    - title: Web design
-      url: /services/web-design
-    - title: Web development
-      url: /services/web-development
-    - title: Website maintenance
-      url: /services/website-maintenance
+# - name: services
+#   title: Services
+#   url: /services
+#   sub_items:
+#     - title: Web design
+#       url: /services/web-design
+#     - title: Web development
+#       url: /services/web-development
+#     - title: Website maintenance
+#       url: /services/website-maintenance
 
 - name: porfolio
   title: Porfolio
